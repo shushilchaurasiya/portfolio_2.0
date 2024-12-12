@@ -2,6 +2,7 @@
 .structural-engineer-page {
     display: flex;
     height: 100vh;  /* Full viewport height */
+    padding: 0 20px; /*Optional padding for spacing */
 }
 
 .layout {
@@ -18,41 +19,90 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;   /* Ensure links span the full width */
-    padding: 20px;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
     padding: 20px;
     min-width: 250px;
     max-width: 350px;
+    position: relative; /* Position for flex centering */
 }
 
-.menu-column nav {
+/* Centering the links in menu column */
+.menu-column h1 {
     display: flex;
     flex-direction: column; /* Stack links vertically */
+    align-items: stretch; /* Ensure the links span the entire width */
+    justify-content: flex-start; /* Align links to the top */
 }
 
-.menu-column nav a {
+/* Styling for individual links */
+.menu-column h1 a {
     display: block;
     padding: 15px 20px; /* Add padding for spacing */
-    margin-bottom: 10px;    /* Add spacing between links */
+    margin-bottom: 0px;    /* Add spacing between links */
     text-decoration: none;  /* Remove underline */
     color: #1d1d1f;
     font-weight: 500;
     font-size: 1.1rem;
-    border-radius: 5px; /* Optional for rounded edges */
+    border-radius: 33px; /* Optional for rounded edges */
     background-color: transparent;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.menu-column nav a:hover {
-    background-color: #0071e3;
+.menu-column h1 a {
+    color: #666666;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.menu-column h1 a:hover, a:focus {
+    color: #005bb5;
+    /* text-decoration: underline; */
+  }
+
+/* Styling for the active (current page) link */
+.menu-column h1 a.active {
+    font-weight: 700;
+    background-color: #1d1d1f;
     color: #fff;
 }
 
-.menu-column nav a.active {
-    font-weight: 700;
-    background-color: #0071e3;
-    color: #fff;
+
+/* Style for content-column */
+.content-column {
+    padding: 20px 20px 0px 20px; /* Top, Right, Bottom, Left */
+    max-width: 1000px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.content-column h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.content-column p {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Link in paragraph */
+.content-column a {
+    color: #007bff;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Link on hover in paragraph */
+.content-column a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
 }
 
 /* Responsive Design */

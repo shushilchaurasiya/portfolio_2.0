@@ -25,21 +25,55 @@ html, body {
 /* Targetting apple-page */
 body.apple-page {
     display: flex;              /* Use Flexbox layout */
-    justify-content: center;    /* Horizontally center the body content */
     align-items: center;        /* Vertically center the body content */
     height: 100vh;              /* Full viewport height */
-    text-align: center;         /* Center the text inside the body */
     padding: 0 20px;            /* Optional padding for spacing */
 }
 
   /* Styling for header */
 body.apple-page header {
+  position: relative;
     display: flex;
     flex-direction: column;     /* Stack the header elements vertically */
     align-items: left   ;        /* Center the text horizontally */
-    text-align: left;           /* Left align the text inside h1 */
-    justify-content: center;    /* Vertically center the content */
 }
+
+/* Centering content wrapper */
+.content-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Styling for the profile layout */
+.profile-layout {
+  display: flex;                /* Flexbox layout for horizontal alignment */
+  align-items: center;          /* Align items center of the image vertically */
+  gap: 20px;                    /* Space between the image and the headers */
+  max-width: 900px;             /* Optional: Limit the width for better centering */
+  margin: 0 auto;               /* Center the layout on the page */
+}
+
+/* Styling for the profile photo */
+.profile-photo {
+  height: auto;                 /* Allow height to scale */
+  max-height: 500px;            /* Restrict the max height */
+  aspect-ratio: 3 / 4;          /* Maintain rectangular shape */
+  border-radius: 33px;          /* Rounded corners for the rectangle */
+  object-fit: cover;            /* Ensure the image fills the container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+}
+
+/* Styling for the header content */
+.header-content {
+  display: flex;
+  flex-direction: column;       /* Stack headers vertically */
+}
+
 
 /* Main content fills available space */
 main {
@@ -57,7 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1.paragraph {
     color: #666666;
-    text-align: left;
 }
 
 /* Paragraphs */
@@ -130,7 +163,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
   nav {
     flex-direction: column;
@@ -139,5 +172,20 @@ footer {
   nav a {
     margin-left: 0;
     margin-bottom: 1rem;
+  }
+
+  .profile-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-photo {
+    width: 60%;                /* Adjust width for smaller screens */
+    height: auto;              /* Maintain aspect ratio */
+    margin-bottom: 20px;
+  }
+
+  .header-content {
+    text-align: center;        /* Center align text on smaller screens */
   }
 }

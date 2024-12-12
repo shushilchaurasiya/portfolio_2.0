@@ -1,0 +1,126 @@
+/* Import Lexend font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/* Resetting default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global container for the website */
+.container {
+  max-width: 1200px; /* Similar to facebooks' max width */
+  margin: 0 auto; /* Centers the container */
+  padding: 0 15px; /* Add some padding for content spacing */
+  box-sizing: border-box; /* Include padding and boarder in the width */
+}
+
+/* Global font and background */
+/* Ensure the body and HTML take up the full height */
+html, body {
+    font-family: 'Lexend', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Primary: Lexend, Fallback: Helvetica Neue */
+    font-size: 12px;
+    line-height: 1;
+    color: #1d1d1f;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    height: 100%; /* Full height */
+}
+
+/* Main content fills available space */
+main {
+    flex: 1; /* Allows main to take up all available space */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Use a bold weight for headings */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #1d1d1f;
+  white-space: nowrap;
+}
+
+h1.paragraph {
+    color: #666666;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #1d1d1f;
+}
+
+/* Links */
+a {
+  color: #0071e3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover, a:focus {
+  color: #005bb5;
+  text-decoration: underline;
+}
+
+/* Buttons */
+button, .btn {
+  font-family: inherit; /* Inherit the global font-family */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #0071e3;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover, .btn:hover {
+  background-color: #005bb5;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f5f5f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav a {
+  color: #1d1d1f;
+  margin-left: 1.5rem;
+}
+
+/* Footer */
+footer {
+  padding: 2rem;
+  background-color: #f5f5f7;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6e6e73;
+  margin-top: auto; /* Push footer to the bottom of the page */
+  width: 100%;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%; /* Use full width for smaller screens */
+    padding: 0 10px; /* Reduce padding on smaller screens */
+  }
+}

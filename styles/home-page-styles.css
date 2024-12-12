@@ -50,6 +50,16 @@ body.home-page header {
   flex-direction: column;       /* Stack headers vertically */
 }
 
+/* Add this to your CSS file */
+.vertical-line {
+    width: 2px; /* Width of the vertical line */
+    background: linear-gradient(to bottom, transparent 0%, #ccc 45%, #ccc 60%, transparent 100%);
+    height: auto; /* Adjust height */
+    align-self: stretch; /* Stretch to fill the available space */
+  }
+  
+  
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {

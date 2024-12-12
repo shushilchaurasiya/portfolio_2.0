@@ -39,10 +39,11 @@ body.home-page header {
   height: auto;                 /* Allow height to scale */
   max-height: 500px;            /* Restrict the max height */
   aspect-ratio: 3 / 4;          /* Maintain rectangular shape */
-  border-radius: 33px;          /* Rounded corners for the rectangle */
+  border-radius: 20px;          /* Rounded corners for the rectangle */
   object-fit: cover;            /* Ensure the image fills the container */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
 }
+
 
 /* Styling for the header content */
 .header-content {
@@ -50,7 +51,7 @@ body.home-page header {
   flex-direction: column;       /* Stack headers vertically */
 }
 
-/* Add this to your CSS file */
+/* Separator */
 .vertical-line {
     width: 2px; /* Width of the vertical line */
     background: linear-gradient(to bottom, transparent 0%, #ccc 45%, #ccc 60%, transparent 100%);
@@ -82,7 +83,15 @@ body.home-page header {
     .profile-photo {
       width: 60%;                /* Adjust width for smaller screens */
       height: auto;              /* Maintain aspect ratio */
-      margin-bottom: 20px;
+      margin-bottom: 0px;
+    }
+
+    .vertical-line {
+        width: 80%; /* Full width for horizontal line */
+        height: 2px; /* Change to horizontal line */
+        background: linear-gradient(to right, transparent 0%, #ccc 45%, #ccc 60%, transparent 100%);
+        margin: 0 0; /* Add spacing between the elements */
+        align-self: center; /* Center the horizontal line */
     }
   
     .header-content {

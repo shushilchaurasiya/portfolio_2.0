@@ -1,0 +1,82 @@
+/* Layout for the Structural Engineer page */
+.structural-engineer-page {
+    display: flex;
+    height: 100vh;  /* Full viewport height */
+}
+
+.layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;   /* Prevent overflow */
+}
+
+/* Navigation Menu Column */
+.menu-column {
+    width: auto; 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;   /* Ensure links span the full width */
+    padding: 20px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    padding: 20px;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.menu-column nav {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+}
+
+.menu-column nav a {
+    display: block;
+    padding: 15px 20px; /* Add padding for spacing */
+    margin-bottom: 10px;    /* Add spacing between links */
+    text-decoration: none;  /* Remove underline */
+    color: #1d1d1f;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 5px; /* Optional for rounded edges */
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-column nav a:hover {
+    background-color: #0071e3;
+    color: #fff;
+}
+
+.menu-column nav a.active {
+    font-weight: 700;
+    background-color: #0071e3;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-column {
+        width: 100%;    /* Full width for smaller screens */
+        height: auto;
+        box-shadow: none;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .menu-column nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu-column nav a {
+        text-align: center;
+        margin-bottom: 0px; /* Reduce spacing */
+        padding: 10px, 15px;
+        flex: 0;
+        white-space: nowrap;
+    }
+}

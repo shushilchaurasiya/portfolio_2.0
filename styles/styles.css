@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+/* Global container for the website */
+.container {
+  max-width: 1200px; /* Similar to facebooks' max width */
+  margin: 0 auto; /* Centers the container */
+  padding: 0 15px; /* Add some padding for content spacing */
+  box-sizing: border-box; /* Include padding and boarder in the width */
+}
+
 /* Global font and background */
 /* Ensure the body and HTML take up the full height */
 html, body {
@@ -108,3 +116,10 @@ footer {
 }
 
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%; /* Use full width for smaller screens */
+    padding: 0 10px; /* Reduce padding on smaller screens */
+  }
+}

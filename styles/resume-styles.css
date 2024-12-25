@@ -50,6 +50,12 @@ p, li {
     margin-bottom: 0.5rem;
 }
 
+.side-panel-bullets {
+    font-weight: 300;
+    font-size: small;
+    font-style: oblique;
+}
+
 /* Two-column layout */
 main {
     display: grid;
@@ -58,12 +64,12 @@ main {
 }
 
 /* Left Column: Profile and Education sections */
-main > div:nth-child(1),
-main > div:nth-child(2) {
-    grid-column: 2;
+main > div:nth-child(1) {
+    grid-column: 1;
 }
 
 /* Right Column: Profile and Education sections */
+main > div:nth-child(2)
 main > div:nth-child(3),
 main > div:nth-child(4),
 main > div:nth-child(5),
@@ -101,6 +107,58 @@ h5 {
 li {
     list-style-type: circle; /* Uses circular bullets for a clean look */
     margin-left: 1.5em; /* Indents list items for better hierarchy */
+  }
+
+/* Profile picture in the resume */
+  .profile-img {
+    margin: 10px 0px 30px 0px;
+    border-radius: 10px;
+    transition-duration: 500ms;
+  }
+
+  .profile-img:hover {
+    scale: 1.05;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px 2px #aaaaaa;
+    transition-duration: 500ms;
+  }
+
+  /* Organization Logos */
+  .org-logo-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: calc (1.5cm *3 + 10px *2);
+  }
+
+  .org-logo-current {
+    display: block;
+    flex-direction: column;
+    width: 1.5cm;
+    height: 1.5cm;
+    padding: 5px;
+    position: relative;
+    border-bottom: 2px solid #0056b3;
+    transition-duration: 200ms;
+  }
+
+  .org-logo {
+    display: block;
+    flex-direction: column;
+    width: 1.5cm;
+    height: 1.5cm;
+    padding: 5px;
+    filter: grayscale(100%);
+    transition-duration: 200ms;
+  }
+
+  .org-logo:hover, 
+  .org-logo-current:hover {
+    scale: 1.05;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0px #aaaaaa;
+    filter: grayscale(0%);
+    transition-duration: 200ms;
   }
   
   /* Print styles */

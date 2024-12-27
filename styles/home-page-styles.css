@@ -11,7 +11,7 @@ body.home-page header {
   position: relative;
     display: flex;
     flex-direction: column;     /* Stack the header elements vertically */
-    align-items: left   ;        /* Center the text horizontally */
+    align-items: left;        /* Center the text horizontally */
 }
 
 /* Centering content wrapper */
@@ -87,11 +87,11 @@ body.home-page header {
     }
 
     .vertical-line {
-        width: 80%; /* Full width for horizontal line */
-        height: 2px; /* Change to horizontal line */
-        background: linear-gradient(to right, transparent 0%, #ccc 45%, #ccc 60%, transparent 100%);
-        margin: 0 0; /* Add spacing between the elements */
-        align-self: center; /* Center the horizontal line */
+      width: 80%; /* Full width for horizontal line */
+      height: 2px; /* Change to horizontal line */
+      background: linear-gradient(to right, transparent 0%, #ccc 45%, #ccc 60%, transparent 100%);
+      margin: 0 0; /* Add spacing between the elements */
+      align-self: center; /* Center the horizontal line */
     }
   
     .header-content {

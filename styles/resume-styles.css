@@ -25,6 +25,9 @@ h1, h2, h3, h4, h5 {
   margin: 0.5rem 0; /* Provides consistent spacing around headings */
 }
 
+.extra-margin-top-h2 {
+  margin-top: 40px;
+}
 
 /* Links */
 a {
@@ -143,11 +146,7 @@ h5 {
 }
 
 
-/* List items for responsibilities or achievements */
-li {
-  list-style-type: circle; /* Uses circular bullets for a clean look */
-  margin-left: 1.5em; /* Indents list items for better hierarchy */
-}
+
 
 /* Profile picture in the resume */
 .profile-img {
@@ -212,6 +211,8 @@ li {
 .project {
   padding: 2px 2px 2px 0px;
 }
+
+
 
 div li {
   list-style-type: none;
